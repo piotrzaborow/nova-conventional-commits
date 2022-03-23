@@ -2,7 +2,7 @@
 
 An Nova.app extension which provides support for Conventional Commits.
 
-![](./Images/docs/Screenshot.png)
+![](https://github.com/piotrzaborow/nova-conventional-commits/blob/main/Images/docs/Screenshot.png?raw=true)
 
 ## Requirements
 
