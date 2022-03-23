@@ -9,8 +9,8 @@
 	"main": "main.js",
 
 	"activationEvents": ["*"],
-	"bugs": "",
-	"repository": "",
+	"bugs": "https://github.com/piotrzaborow/nova-conventional-commits/issues",
+	"repository": "https://github.com/piotrzaborow/nova-conventional-commits",
 	"entitlements": {
 		"process": true,
 		"filesystem": "readwrite"
