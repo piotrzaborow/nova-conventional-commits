@@ -3,7 +3,7 @@
 	"name": "Conventional Commits",
 	"organization": "Zaborowski.dev",
 	"description": "Conventional commits",
-	"version": "1.0",
+	"version": "1.0.1",
 	"categories": ["commands"],
 
 	"main": "main.js",
