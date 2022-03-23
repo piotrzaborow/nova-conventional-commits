@@ -28,7 +28,7 @@ Let's get started!
 
 Conventional Commits requires some additional tools to be installed on your Mac:
 
-- [Node.js 8.2.0](https://nodejs.org) and NPM 5.2.0 or newer
+-   [Node.js 8.2.0](https://nodejs.org) and NPM 5.2.0 or newer
 
 <!--
 ✨ Providing tips, tricks, or other guides for installing or configuring external dependencies can go a long way toward helping your users have a good setup experience:
@@ -44,8 +44,8 @@ Conventional Commits requires some additional tools to be installed on your Mac:
 
 To run Conventional Commits:
 
-- Select the **Editor → Conventional Commits** menu item; or
-- Open the command palette and type `Conventional Commits`
+-   Select the **Editor → Conventional Commits** menu item; or
+-   Open the command palette and type `Conventional Commits`
 
 <!--
 🎈 Alternatively, if your extension runs automatically (as in the case of a validator), consider showing users what they can expect to see:

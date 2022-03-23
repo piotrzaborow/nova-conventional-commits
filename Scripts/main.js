@@ -191,32 +191,17 @@ const checkFiles = () => {
 }
 
 const makeCommit = (message) => {
-	log(message)
-
-	var addFiles = new Process('/usr/bin/env', {
-		args: ['git', 'add', '.'],
-		shell: true,
-	})
-
-	addFiles.start()
-
-	addFiles.onStdout((line) => {
-		log('OUT: ' + line)
-	})
-
-	addFiles.onStderr((line) => {
-		log('ERROR: ' + line)
-	})
-
 	var process = new Process('/usr/bin/env', {
-		args: ['git', 'commit', '-a', '-m', message],
+		args: ['git', 'commit', '-am', message],
 		shell: true,
 	})
 
 	process.start()
 
+	let lines = []
+
 	process.onStdout((line) => {
-		log('OUT: ' + line)
+		lines.push(line)
 	})
 
 	process.onStderr((line) => {
@@ -224,7 +209,7 @@ const makeCommit = (message) => {
 	})
 
 	process.onDidExit(() => {
-		log('Commit done')
+		log(lines.join('\n'))
 	})
 }
 
@@ -234,18 +219,16 @@ const makeCommit = (message) => {
 var commitObj = {}
 
 nova.commands.register('conventional-commits.commit', (workspace) => {
-	checkFiles()
-
-	// selectType(workspace, () =>
-	// 	writeScope(workspace, () =>
-	// 		writeShortDescription(workspace, () =>
-	// 			writeLongDescription(workspace, () => {
-	// 				writeBreaking(workspace, () => {
-	// 					const commit = convertCommit()
-	// 					makeCommit(commit)
-	// 				})
-	// 			})
-	// 		)
-	// 	)
-	// )
+	selectType(workspace, () =>
+		writeScope(workspace, () =>
+			writeShortDescription(workspace, () =>
+				writeLongDescription(workspace, () => {
+					writeBreaking(workspace, () => {
+						const commit = convertCommit()
+						makeCommit(commit)
+					})
+				})
+			)
+		)
+	)
 })
