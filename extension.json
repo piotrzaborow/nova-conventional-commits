@@ -1,0 +1,27 @@
+{
+	"identifier": "dev.zaborowski.ConventionalCommits",
+	"name": "Conventional Commits",
+	"organization": "Zaborowski.dev",
+	"description": "Conventional commits",
+	"version": "1.0",
+	"categories": ["commands"],
+
+	"main": "main.js",
+
+	"activationEvents": ["*"],
+	"bugs": "",
+	"repository": "",
+	"entitlements": {
+		"process": true,
+		"filesystem": "readwrite"
+	},
+
+	"commands": {
+		"extensions": [
+			{
+				"title": "Conventional Commit",
+				"command": "conventional-commits.commit"
+			}
+		]
+	}
+}
