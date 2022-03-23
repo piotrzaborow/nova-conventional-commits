@@ -160,36 +160,6 @@ const convertCommit = () => {
 	return commitString
 }
 
-const checkFiles = () => {
-	var process = new Process('/usr/bin/env', {
-		args: [
-			'git',
-			'diff',
-			'--staged',
-			'--quiet',
-			'&&',
-			'echo',
-			'staged',
-			'||',
-			'echo',
-			'nostaged',
-		],
-		shell: true,
-	})
-
-	process.start()
-
-	process.onStdout((line) => {
-		if (line == 'nostaged') {
-			log('Stage files before commit')
-		}
-	})
-
-	process.onStderr((line) => {
-		log('ERROR: ' + line)
-	})
-}
-
 const makeCommit = (message) => {
 	var process = new Process('/usr/bin/env', {
 		args: ['git', 'commit', '-am', message],
@@ -204,12 +174,8 @@ const makeCommit = (message) => {
 		lines.push(line)
 	})
 
-	process.onStderr((line) => {
-		log('ERROR: ' + line)
-	})
-
 	process.onDidExit(() => {
-		log(lines.join('\n'))
+		console.log(lines.join('\n'))
 	})
 }
 
