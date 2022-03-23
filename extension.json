@@ -2,7 +2,7 @@
 	"identifier": "dev.zaborowski.ConventionalCommits",
 	"name": "Conventional Commits",
 	"organization": "Zaborowski.dev",
-	"description": "Conventional commits",
+	"description": "Support for Conventional-commits",
 	"version": "1.0.1",
 	"categories": ["commands"],
 
@@ -12,8 +12,7 @@
 	"bugs": "https://github.com/piotrzaborow/nova-conventional-commits/issues",
 	"repository": "https://github.com/piotrzaborow/nova-conventional-commits",
 	"entitlements": {
-		"process": true,
-		"filesystem": "readwrite"
+		"process": true
 	},
 
 	"commands": {
