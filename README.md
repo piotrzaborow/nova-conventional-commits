@@ -14,5 +14,6 @@ Conventional Commits requires some additional tools to be installed on your Mac:
 
 To run Conventional Commits:
 
+-   Stage your files either via command `git add` or via sidebar source control extension
 -   Select the **Editor → Conventional Commits** menu item; or
 -   Open the command palette and type `Conventional Commits`
