@@ -9,10 +9,6 @@
  * Constant functions and variables
  */
 
-const log = (message) => {
-	nova.workspace.showInformativeMessage(message)
-}
-
 const types = [
 	{ name: 'feat', description: 'A new feature' },
 	{ name: 'fix', description: 'A bug fix' },
@@ -51,18 +47,6 @@ const types = [
 	},
 	{ name: 'revert', description: 'Reverts a previous commit' },
 ]
-
-/*
- * Activate and deactivate functions
- */
-
-exports.activate = function () {
-	// Do work when the extension is activated
-}
-
-exports.deactivate = function () {
-	// Clean up state before the extension is deactivated
-}
 
 /**
  * Helpers
