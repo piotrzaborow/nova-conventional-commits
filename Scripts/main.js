@@ -63,7 +63,7 @@ const selectType = (workspace, nextAction) => {
 			placeholder: 'Select type',
 		},
 		(choice) => {
-			var t = choice?.split(' - ')
+			let t = choice?.split(' - ')
 			commitObj.type = t[0]
 			nextAction()
 		}
@@ -145,28 +145,26 @@ const convertCommit = () => {
 }
 
 const makeCommit = (message) => {
-	var process = new Process('/usr/bin/env', {
+	let process = new Process('/usr/bin/env', {
 		args: ['git', 'commit', '-am', message],
 		shell: true,
 	})
 
 	process.start()
 
-	let lines = []
-
 	process.onStdout((line) => {
-		lines.push(line)
+		console.log(line)
 	})
 
 	process.onDidExit(() => {
-		console.log(lines.join('\n'))
+		console.log('Commit done')
 	})
 }
 
 /**
  * Commands
  */
-var commitObj = {}
+let commitObj = {}
 
 nova.commands.register('conventional-commits.commit', (workspace) => {
 	selectType(workspace, () =>
