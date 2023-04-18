@@ -3,7 +3,7 @@
 	"name": "Conventional Commits",
 	"organization": "Zaborowski.dev",
 	"description": "Support for Conventional-commits",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"categories": ["commands"],
 	"main": "main.js",
 	"activationEvents": ["*"],

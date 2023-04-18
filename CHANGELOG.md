@@ -1,3 +1,8 @@
+## Version 1.0.4
+
+-   Fixed bug with not applying git command
+-   Changed structure of source files
+
 ## Version 1.0.3
 
 Updated README.md with proper image
